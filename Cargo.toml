@@ -30,7 +30,7 @@ serde = { version = "1.0.130", features = [
 serde_json = { version = "1.0.81", default-features = false, features = [
     "alloc",
 ] }
-starknet-crypto = { version = "0.5.1", default-features = false }
+starknet-crypto = { git = "https://github.com/xJonathanLEI/starknet-rs", branch = "dev/query_tx_version", default-features = false }
 derive_more = { version = "0.99.17", default-features = false, features = [
     "display",
     "from",
