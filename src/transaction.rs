@@ -1,6 +1,6 @@
 use derive_more::From;
 #[cfg(feature = "parity-scale-codec")]
-use parity_scale_codec::{Decode, Encode};
+use parity_scale_codec::{Decode, Encode, MaxEncodedLen};
 use primitive_types::H160;
 use serde::{Deserialize, Serialize};
 
@@ -327,7 +327,7 @@ pub struct TransactionSignature(pub Vec<StarkFelt>);
 #[derive(
     Debug, Copy, Clone, Default, Eq, PartialEq, Hash, Deserialize, Serialize, PartialOrd, Ord,
 )]
-#[cfg_attr(feature = "parity-scale-codec", derive(Encode, Decode))]
+#[cfg_attr(feature = "parity-scale-codec", derive(Encode, Decode, MaxEncodedLen))]
 #[cfg_attr(feature = "scale-info", derive(scale_info::TypeInfo))]
 pub struct TransactionVersion(pub StarkFelt);
 
