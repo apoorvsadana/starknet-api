@@ -51,6 +51,7 @@ pub fn pedersen_hash_array(felts: &[StarkFelt]) -> StarkHash {
 #[derive(Copy, Clone, Eq, PartialEq, Default, Hash, Deserialize, Serialize, PartialOrd, Ord)]
 #[serde(try_from = "PrefixedBytesAsHex<32_usize>", into = "PrefixedBytesAsHex<32_usize>")]
 #[cfg_attr(feature = "parity-scale-codec", derive(Encode, Decode))]
+#[cfg_attr(feature = "scale-info", derive(scale_info::TypeInfo))]
 pub struct StarkFelt(pub [u8; 32]);
 
 impl StarkFelt {

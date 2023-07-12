@@ -41,5 +41,7 @@ parity-scale-codec = { version = "3.6.0", default-features = false, features = [
     "derive",
 ], optional = true }
 
+scale-info = { version = "2.9.0", default-features = false, features = ["derive", "bit-vec", "decode"], optional = true }
+
 [dev-dependencies]
 assert_matches = "1.5.0"
